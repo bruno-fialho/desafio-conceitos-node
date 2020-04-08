@@ -16,5 +16,7 @@
     "jest": "^25.2.6",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
-  }
+  },
+  "repository": "https://github.com/bruno-fialho/desafio-conceitos-node.git",
+  "author": "bruno-fialho <brugerf@gmail.com>"
 }
