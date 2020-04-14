@@ -10,12 +10,13 @@ const app = express();
 // Permite que o express receba JSON
 app.use(express.json());
 
-// Usa o cors
+// Usa o cors - Conecta o front-end se conecte com o back-end
 app.use(cors());
 
 // Declara array vazio (enquanto não trabalhar com banco de dado)
 const repositories = [];
 
+// List
 app.get("/repositories", (request, response) => {
   // Busca title no query
   const { title } = request.query;
@@ -29,6 +30,7 @@ app.get("/repositories", (request, response) => {
   return response.json(results);
 });
 
+// Create
 app.post("/repositories", (request, response) => {
   // Utiliza informações do body
   const { title, url, techs } = request.body;
@@ -43,6 +45,7 @@ app.post("/repositories", (request, response) => {
   return response.json(repository);
 });
 
+// Update
 app.put("/repositories/:id", (request, response) => {
   // Utiliza id dado nos params
   const { id } = request.params;
@@ -73,6 +76,7 @@ app.put("/repositories/:id", (request, response) => {
   return response.json(repository);
 });
 
+// Delete
 app.delete("/repositories/:id", (request, response) => {
   // Utiliza id dado nos params
   const { id } = request.params;
@@ -92,6 +96,7 @@ app.delete("/repositories/:id", (request, response) => {
   return response.status(204).send();
 });
 
+// Increase Likes
 app.post("/repositories/:id/like", (request, response) => {
   // Utiliza id dado nos params
   const { id } = request.params;
