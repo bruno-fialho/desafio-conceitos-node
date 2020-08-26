@@ -1,67 +1,66 @@
-// Importa express, cors?, e uuid (universal unique id)
+// Import express, cors?, uuid (new version)
 const express = require("express");
 const cors = require("cors");
-
 const { uuid } = require("uuidv4");
 
-// Declara express
+// Declare express
 const app = express();
 
-// Permite que o express receba JSON
+// Allow json to express
 app.use(express.json());
 
-// Usa o cors - Conecta o front-end se conecte com o back-end
+// Use cores - Connect front-end with back-end
 app.use(cors());
 
-// Declara array vazio (enquanto não trabalhar com banco de dado)
+// Declare empty array (provisory)
 const repositories = [];
 
-// List
+// List repositories
 app.get("/repositories", (request, response) => {
-  // Busca title no query
+  // Get title from query
   const { title } = request.query;
 
-  // Filtra ou não title do query
+  // Filter title from query (if title exists)
   const results = title
     ? repositories.filter(repository => repository.title.includes(title))
     : repositories;
   
-  // Retorna todos os repositórios
+  // Return all repositories
   return response.json(results);
 });
 
-// Create
+// Create repository
 app.post("/repositories", (request, response) => {
-  // Utiliza informações do body
+  // Get info in the body
   const { title, url, techs } = request.body;
 
-  // Cria novo repositório
+  // Create new repository
   const repository = { id: uuid(), title, url, techs, likes: 0 };
 
-  // Add novo repositório
+  // Add new repository to repositories array
   repositories.push(repository);
 
-  // Retorna novo repositório
+  // Retorn only new repository
   return response.json(repository);
 });
 
-// Update
+// Update repository
 app.put("/repositories/:id", (request, response) => {
-  // Utiliza id dado nos params
+  // Get id from params
   const { id } = request.params;
 
-  // Utiliza informações do body
+  // Get info in the body
   const { title, url, techs } = request.body;
 
-  // Busca index do repositório
+  // Search index of given id on repositories array
   const repositoryIndex = repositories.findIndex(repository => repository.id === id);
 
-  // Testa busca do index
+  // Check if id was found
   if (repositoryIndex < 0) {
     return response.status(400).json({ error: 'Repository not found.' });
   }
 
-  // Cria novo repositório usando Sintaxe de Espelhamento para recuperar o número de likes
+  // Create new repository with Spread Syntax
   const repository = {
     ...repositories[repositoryIndex],
     title,
@@ -69,51 +68,52 @@ app.put("/repositories/:id", (request, response) => {
     techs,
   };
 
-  // Substitui repositório
+  // Replace repository
   repositories[repositoryIndex] = repository;
 
-  // Retorna novo repositório
+  // Retorn new repository
   return response.json(repository);
 });
 
-// Delete
+// Delete repository
 app.delete("/repositories/:id", (request, response) => {
-  // Utiliza id dado nos params
+  // Get id from params
   const { id } = request.params;
   
-  // Busca index do repositório
+  // Search index of given id on repositories array
   const repositoryIndex = repositories.findIndex(repository => repository.id === id);
 
-  // Testa busca do index
+  // Check if id was found
   if (repositoryIndex < 0) {
     return response.status(400).json({ error: 'Repository not found.' });
   }
 
-  // Deleta o repositório
+  // Delete repository
   repositories.splice(repositoryIndex, 1);
 
-  // Retorna sucesso
+  // Retorn success
   return response.status(204).send();
 });
 
 // Increase Likes
 app.post("/repositories/:id/like", (request, response) => {
-  // Utiliza id dado nos params
+  // Get id from params
   const { id } = request.params;
   
-  // Busca o repositório
+  // Search repository
   const repository = repositories.find(
     (repository) => repository.id === id
   );
 
-  // Caso não encontre
+  // Check if repository was found
   if (!repository) { 
   return response.status(400).json({ error: "Repository not found" });
   }
 
-  // Altera o valor de likes somando mais 1
+  // Add one like to repository
   repository.likes += 1; 
 
+  // Retorn new repository
   return response.json(repository)
 });
 
