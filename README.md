@@ -10,14 +10,14 @@
 </h3>
 
 <p align="center">
-  <a href="#🚀-sobre-a-aplicação">Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#💿-pacotes-instalados">Pacotes instalados</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#📝-licença">Licença</a>
+  <a href="#rocket-sobre-a-aplicação">Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#cd-pacotes-instalados">Pacotes instalados</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
 </p>
 
 <img alt="GIF Demo" src=./src/assets/screen-insomnia.gif />
 
-## 🚀 Sobre a aplicação
+## :rocket: Sobre a aplicação
 
 Uma simples aplicação em Node.js!
 
@@ -71,7 +71,7 @@ Para esse desafio temos os seguintes testes:
 
 - **`should not be able to like a repository that does not exist`**: Para que esse teste passe, você deve validar na sua rota de like se o id do repositório enviado pela url existe ou não. Caso não exista, retornar um erro com status `400`.
 
-## 💿 Pacotes instalados
+## :cd: Pacotes instalados
 
 A seguir segue uma lista dos pacotes instalados:
 
@@ -81,6 +81,6 @@ A seguir segue uma lista dos pacotes instalados:
 - [jest](https://jestjs.io/docs/en/getting-started)
 - [supertest](https://www.npmjs.com/package/supertest)
 
-## 📝 Licença
+## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
