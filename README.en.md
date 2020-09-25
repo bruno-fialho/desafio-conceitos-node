@@ -21,7 +21,7 @@
 
 A simple application in Node.js!
 
-This is an application to storage repositories of your portfolio, that will allow you to list, update, and delete repositories, and besides that, the repositories can also receive likes.
+This is an application to storage repositories of your portfolio, that allow you to list, update, and delete repositories, and besides that, the repositories can also receive likes.
 
 ### Application Routes
 
