@@ -21,7 +21,15 @@
 
 Uma simples aplicação em Node.js!
 
-Essa é uma aplicação para armazenar repositórios do seu portfólio, que irá permitir a criação, listagem, atualização e remoção dos repositórios, e além disso permitir que os repositórios possam receber "likes".
+Essa é uma aplicação para armazenar repositórios do seu portfólio, que permite a criação, listagem, atualização e remoção dos repositórios, e além disso permitir que os repositórios possam receber "likes".
+
+### Template da aplicação
+
+O template está disponível na seguinte url: **[Acessar Template](https://github.com/Rocketseat/gostack-template-conceitos-nodejs)**
+
+**Dica**: Caso não saiba utilizar repositórios do Github como template, temos um guia em **[FAQ da Rocketseat](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/faq-desafios).**
+
+Agora navegue até a pasta criada e abra no Visual Studio Code, lembre-se de executar o comando `yarn` no seu terminal para instalar todas as dependências.
 
 ### Rotas da aplicação
 
@@ -63,15 +71,15 @@ Para esse desafio temos os seguintes testes:
 
 - **`should not be able to like a repository that does not exist`**: Para que esse teste passe, você deve validar na sua rota de like se o id do repositório enviado pela url existe ou não. Caso não exista, retornar um erro com status `400`.
 
-## 💿 Pacotes requiridos
+## 💿 Pacotes instalados
 
-A seguir segue uma lista dos pacotes necessários para a aplicação (Usando [yarn](https://yarnpkg.com/)):
+A seguir segue uma lista dos pacotes instalados:
 
-- yarn add [express](https://www.npmjs.com/package/express)
-- yarn add [nodemon](https://www.npmjs.com/package/nodemon) -D
-- yarn add [uuidv4](https://www.npmjs.com/package/uuidv4)
-- yarn add [jest](https://jestjs.io/docs/en/getting-started) -D
-- yarn add [supertest](https://www.npmjs.com/package/supertest) -D
+- [express](https://www.npmjs.com/package/express)
+- [nodemon](https://www.npmjs.com/package/nodemon)
+- [uuidv4](https://www.npmjs.com/package/uuidv4)
+- [jest](https://jestjs.io/docs/en/getting-started)
+- [supertest](https://www.npmjs.com/package/supertest)
 
 ## 📝 Licença
 

@@ -21,7 +21,15 @@
 
 A simple application in Node.js!
 
-This is an application to storage repositories of your portfolio, that will allow you to list, update, and delete repositories, and besides that, the repositories can also receive likes.
+This is an application to storage repositories of your portfolio, that allow you to list, update, and delete repositories, and besides that, the repositories can also receive likes.
+
+### Application Template
+
+The template is available in the following URL: **[Access Template](https://github.com/Rocketseat/gostack-template-conceitos-nodejs)**
+
+**Tip**: In case you don't know how to use Github repositories as templates, we have a guide in **[our FAQ](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/faq-desafios).**
+
+Navigate to the created folder and open it in the Visual Studio Code, remember to execute the command `yarn` in your terminal in order to install all the dependencies
 
 ### Application Routes
 
@@ -63,15 +71,15 @@ For this challenge we have the following tests:
 
 - **`should not be able to like a repository that does not exist`**: In order for this test to pass, you must validate in your like route whether the repository id sent by the URL exists or not. If not, return an error with status `400`.
 
-## 💿 Required packages
+## 💿 Installed packages
 
-The following is a list of the packages needed for the application (Using [yarn](https://yarnpkg.com/)):
+The following is a list of installed packages:
 
-- yarn add [express](https://www.npmjs.com/package/express)
-- yarn add [nodemon](https://www.npmjs.com/package/nodemon) -D
-- yarn add [uuidv4](https://www.npmjs.com/package/uuidv4)
-- yarn add [jest](https://jestjs.io/docs/en/getting-started) -D
-- yarn add [supertest](https://www.npmjs.com/package/supertest) -D
+- [express](https://www.npmjs.com/package/express)
+- [nodemon](https://www.npmjs.com/package/nodemon)
+- [uuidv4](https://www.npmjs.com/package/uuidv4)
+- [jest](https://jestjs.io/docs/en/getting-started)
+- [supertest](https://www.npmjs.com/package/supertest)
 
 ## 📝 Licence
 
